@@ -10,7 +10,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-dl, dt, dd, ol, ul, li,
+dl, dt, dd, ol, ul, li, span,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -48,44 +48,114 @@ table {
 	border-spacing: 0;
 }
 
+:root {
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary: 'Dancing Script', cursive;
+    --ff-backup:'Overpass', sans-serif;
+}
+
 /* Start Here */
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    max-width: 95%;
-    margin: 25% auto;
     background-color: black;
+    max-width: 95%;
 }
 
-#showHome , #showAbout{
-    display: none;
-    position: absolute;
-    left: 25%;
-    /* object-fit: contain; */
+.mainPage {
+     /* border : 1px solid green;  */
+     margin: 25%;
 }
 
-#showHome:hover {
-    display: block;
+.mainPage img {
+    max-width: 100%;
+    z-index: 1;
 }
 
-.mainText {
-    display: inline-block;
-    /* border : 1px solid green; */
+.mainPage .home img:hover {
+    color: red;
 }
 
-.home {
-
-}
-
-.about {
+.mainPage .about {
     padding-top: 5rem;
 }
-#showFN :hover {
-    opacity: 0;
+
+#indexFrame {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    z-index: -1;
 }
 
-#showLN:hover {
-    opacity: 0;
+/* Home Page */
+
+.mainHome {
+    margin: 10%;
+}
+
+.workInfo {
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+.workInfo h2{
+    /* border-bottom: 4px solid #810000; */
+    color: #810000;
+    font-family: var(--ff-primary);
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.workInfo h3 {
+    color: white;
+    font-family: var(--ff-primary);
+    font-size: 2.5em;
+    margin-top: 0.5em;
+}
+.workInfo p {
+    background-color: white;
+    color: black;
+    padding: 0.3em;
+    font-size: 2em;
+    margin-top: 0.5em;
+    font-family: var(--ff-primary);
+}
+
+.workInfo a:visited {
+    color: black;
+}
+
+.workOne {
+    margin-top: 2em;
+    margin-left: 1em;
+}
+
+
+/* About Page */
+
+.mainAbout {
+    margin: 10%;
+}
+
+.mainAbout {
+    color: white;
+}
+
+.aboutMe__Description {
+    margin-top: 5em;
+    margin-left: 1em;
+}
+
+.aboutMe__Description h2 {
+    font-family: var(--ff-secondary);
+    font-weight: 900;
+    font-size: 4em;
+    color: #810000;
+}
+
+.aboutMe__Description span {
+    display: block;
+    font-family: var(--ff-backup);
+    font-size: 900;
+    font-weight: 900;
+    color: #eeebdd;
 }
