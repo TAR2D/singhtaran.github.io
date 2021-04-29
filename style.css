@@ -66,10 +66,10 @@ body {
      margin: 25%;
 }
 
-.mainPage img {
+/* .mainPage img {
     max-width: 100%;
     z-index: 1;
-}
+} */
 
 .mainPage .home img:hover {
     color: red;
@@ -79,12 +79,12 @@ body {
     padding-top: 5rem;
 }
 
-#indexFrame {
+/* #indexFrame {
     position: absolute;
     top: 0;
     max-width: 100%;
     z-index: -1;
-}
+} */
 
 /* Home Page */
 
