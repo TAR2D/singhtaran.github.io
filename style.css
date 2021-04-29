@@ -90,6 +90,7 @@ body {
 
 .mainHome {
     margin: 10%;
+    max-width: 100%;
 }
 
 .workInfo {
