@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mainText">
+    <div class="mainPage">
         <div class="home">
-            <img id="showFN" src="./FirstName.png" alt="X">
-            <img id="showHome" src="./Home.png" alt="Y">
+            <a href="home.html">
+            <img id="showFN" src="./Assets/FirstName.png" onmouseover="this.src='./Assets/Home.png'" onmouseout="this.src='./Assets/FirstName.png'" alt="">
+            </a>
         </div>
         <div class="about">
-            <img id="showLN" src="./LastName.png" alt="Z">
-            <img id="showAbout" src="./About.png" alt="A">
+            <a href="about.html">
+            <img id="showLN" src="./Assets/LastName.png"  onmouseover="this.src='./Assets/About.png'" onmouseout="this.src='./Assets/LastName.png'" alt="">
+            </a>
         </div>
     </div>
-    
+    <img id="indexFrame" src="./Assets/frame.png" alt="">
 </body>
 </html>
