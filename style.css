@@ -1,3 +1,4 @@
+/* CSS Reset Setting */
 *,
 *::before,
 *::after {
@@ -48,119 +49,156 @@ table {
 	border-spacing: 0;
 }
 
-:root {
-    --ff-primary: 'Roboto', sans-serif;
-    --ff-secondary: 'Dancing Script', cursive;
-    --ff-backup:'Overpass', sans-serif;
-}
+/* Main Code */
 
-/* Start Here */
+:root {
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-secondary: 'Heebo', sans-serif;
+    --fs-h1: 15em;
+
+    --ff-flow: 'Dancing Script', cursive;
+    --fs-p: 3em;
+}
 
 body {
     background-color: black;
-    max-width: 95%;
+    color: white;
 }
 
-.mainPage {
-     /* border : 1px solid green;  */
-     margin: 25%;
+span {
+    display: block;
 }
 
-.mainPage img {
-    max-width: 100%;
-    z-index: 1;
+a:link {
+    text-decoration: inherit;
+    color: inherit;
 }
 
-.mainPage .home img:hover {
-    color: red;
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
 }
 
-.mainPage .about {
-    padding-top: 5rem;
+h1 {
+    font-size: var(--fs-h1);
+    font-family: var(--ff-secondary);
 }
 
-/* #indexFrame {
+p {
+    font-size: var(--fs-p);
+    font-family: var(--ff-primary);
+}
+
+
+/* Main Page */
+
+.mainBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid purple; */
+    height: 100vh;
+    
+}
+
+.mainBox {
+    padding: 2em;
+    left: 30vw;
+    top: 50vh;
+    /* for testing */
+    /* border: 3px solid red; */
+}
+
+/* First name before and after hover */
+.firstName a::after {
+    content: 'Taran';
+}
+.firstName:hover a::after{
+    content: 'Home';
+}
+
+/* last name before and after hover */
+.lastName a:after {
+    content: 'Sidhu';
+}
+.lastName:hover a::after {
+    content: 'About';
+}
+
+.firstName , .lastName {
+    /* border: 1px solid green; */
+    margin: 3em;
+    overflow: hidden;
+}
+
+
+.firstName a, .lastName a{
+    font-family: var(--ff-secondary);
+    font-weight: 700;
+    font-size: 15rem;
+}
+
+/* background Image */
+.earth {
     position: absolute;
-    top: 0;
-    max-width: 100%;
     z-index: -1;
-} */
-
-/* Home Page */
-
-.mainHome {
-    margin: 10%;
-    max-width: 100%;
+}
+.earth img {
+    width: 99vw;
+    height: 99vh;
 }
 
-.workInfo {
-    margin-top: 2em;
-    margin-left: 2em;
-}
-
-.workInfo h2{
-    /* border-bottom: 4px solid #810000; */
-    color: #810000;
-    font-family: var(--ff-primary);
-    font-weight: 900;
-    font-size: 3.5em;
-}
-
-.workInfo h3 {
-    color: white;
-    font-family: var(--ff-primary);
-    font-size: 2.5em;
-    margin-top: 0.5em;
-}
-.workInfo p {
-    background-color: white;
-    color: black;
-    padding: 0.3em;
-    font-size: 2em;
-    margin-top: 0.5em;
-    font-family: var(--ff-primary);
-}
-
-.workInfo a:visited {
-    color: black;
-}
-
-.workInfo a {
-	color: black;
-}
-
-.workOne {
-    margin-top: 2em;
-    margin-left: 1em;
-}
-
-
-/* About Page */
+/* About Style */
 
 .mainAbout {
-    margin: 10%;
+    /* border: 1px solid red; */
+    margin: 5%;
 }
 
-.mainAbout {
-    color: white;
-}
-
-.aboutMe__Description {
-    margin-top: 5em;
-    margin-left: 1em;
+.aboutParts {
+    /* border: 1px solid purple; */
+    margin: 2.5%;
 }
 
 .aboutMe__Description h2 {
-    font-family: var(--ff-secondary);
-    font-weight: 900;
+    font-family: var(--ff-flow);
     font-size: 4em;
-    color: #810000;
 }
 
 .aboutMe__Description span {
-    display: block;
-    font-family: var(--ff-backup);
-    font-size: 900;
-    font-weight: 900;
-    color: #eeebdd;
+    font-family: var(--ff-secondary);
+}
+
+.aboutMe__Description p {
+    margin-top: 1em;
+}
+
+/* contancts list */
+.contacts {
+    margin-top: 2em;
+    /* border: 1px solid blue; */
+}
+
+.contactList {
+    margin: 2em;
+}
+
+.contactList li{
+    border: 1px solid white;
+    padding: 0.2em;
+    display: inline;
+    margin: 0.5em;
+    font-size: 2em;
+    font-family: var(--ff-primary);
+}
+
+.contactList li:hover {
+    background-color: red;
+    color: black;
+    border-color: black;
+}
+
+.contacts h2 {
+    font-family: var(--ff-primary);
+    font-size: 2em;
 }
