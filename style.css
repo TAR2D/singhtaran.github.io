@@ -202,3 +202,17 @@ p {
     font-family: var(--ff-primary);
     font-size: 2em;
 }
+
+/* home */
+.working h2 {
+    font-size: 3em;
+    font-family: var(--ff-primary);
+    margin: 10%;
+}
+
+.working a {
+    color: yellow;
+}
+.working a:hover {
+    border-bottom: 3px solid white;
+}
