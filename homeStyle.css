@@ -1,0 +1,21 @@
+
+:root {
+    --ff-primary: 'Roboto', sans-serif;;
+    --ff-secondary: ;
+}
+
+body {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    font-family: var(--ff-primary);
+}
+
+span {
+    color: yellow;
+    text-decoration: underline;
+}
+span:hover {
+    color: red;
+}
+
