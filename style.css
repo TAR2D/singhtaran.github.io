@@ -49,170 +49,19 @@ table {
 	border-spacing: 0;
 }
 
-/* Main Code */
-
-:root {
-    --ff-primary: 'Montserrat', sans-serif;
-    --ff-secondary: 'Heebo', sans-serif;
-    --fs-h1: 15em;
-
-    --ff-flow: 'Dancing Script', cursive;
-    --fs-p: 3em;
-}
+/* Main code */
 
 body {
     background-color: black;
     color: white;
 }
 
-span {
-    display: block;
-}
-
+/* Clear anchor tag properties */
 a:link {
     text-decoration: inherit;
     color: inherit;
 }
-
 a:visited {
     text-decoration: inherit;
     color: inherit;
-}
-
-h1 {
-    font-size: var(--fs-h1);
-    font-family: var(--ff-secondary);
-}
-
-p {
-    font-size: var(--fs-p);
-    font-family: var(--ff-primary);
-}
-
-
-/* Main Page */
-
-.mainBody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 3px solid purple; */
-    height: 100vh;
-    
-}
-
-.mainBox {
-    padding: 2em;
-    left: 30vw;
-    top: 50vh;
-    /* for testing */
-    /* border: 3px solid red; */
-}
-
-/* First name before and after hover */
-.firstName a::after {
-    content: 'Taran';
-}
-.firstName:hover a::after{
-    content: 'Home';
-}
-
-/* last name before and after hover */
-.lastName a:after {
-    content: 'Sidhu';
-}
-.lastName:hover a::after {
-    content: 'About';
-}
-
-.firstName , .lastName {
-    /* border: 1px solid green; */
-    margin: 3em;
-    overflow: hidden;
-}
-
-
-.firstName a, .lastName a{
-    font-family: var(--ff-secondary);
-    font-weight: 700;
-    font-size: 15rem;
-}
-
-/* background Image */
-.earth {
-    position: absolute;
-    z-index: -1;
-}
-.earth img {
-    width: 99vw;
-    height: 99vh;
-}
-
-/* About Style */
-
-.mainAbout {
-    /* border: 1px solid red; */
-    margin: 5%;
-}
-
-.aboutParts {
-    /* border: 1px solid purple; */
-    margin: 2.5%;
-}
-
-.aboutMe__Description h2 {
-    font-family: var(--ff-flow);
-    font-size: 4em;
-}
-
-.aboutMe__Description span {
-    font-family: var(--ff-secondary);
-}
-
-.aboutMe__Description p {
-    margin-top: 1em;
-}
-
-/* contancts list */
-.contacts {
-    margin-top: 2em;
-    /* border: 1px solid blue; */
-}
-
-.contactList {
-    margin: 2em;
-}
-
-.contactList li{
-    border: 1px solid white;
-    padding: 0.2em;
-    display: inline;
-    margin: 0.5em;
-    font-size: 2em;
-    font-family: var(--ff-primary);
-}
-
-.contactList li:hover {
-    background-color: red;
-    color: black;
-    border-color: black;
-}
-
-.contacts h2 {
-    font-family: var(--ff-primary);
-    font-size: 2em;
-}
-
-/* home */
-.working h2 {
-    font-size: 3em;
-    font-family: var(--ff-primary);
-    margin: 10%;
-}
-
-.working a {
-    color: yellow;
-}
-.working a:hover {
-    border-bottom: 3px solid white;
 }
