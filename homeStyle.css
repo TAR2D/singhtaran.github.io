@@ -16,6 +16,10 @@ img {
     width: 50%;
 }
 
+#artwork {
+    font-size: 3em;
+}
+
 span {
     color: yellow;
     text-decoration: underline;
