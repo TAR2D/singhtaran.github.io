@@ -11,6 +11,11 @@ body {
     font-family: var(--ff-primary);
 }
 
+img {
+    border: 3px solid white;
+    width: 50%;
+}
+
 span {
     color: yellow;
     text-decoration: underline;
