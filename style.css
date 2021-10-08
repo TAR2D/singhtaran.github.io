@@ -189,6 +189,7 @@ button:hover, button:active, button:checked {
 .boxAnimation {
     position: relative;
     transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
     animation-name: rotate;
     animation-duration: 30s;
     animation-timing-function: linear;
