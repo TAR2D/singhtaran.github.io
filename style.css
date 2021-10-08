@@ -207,6 +207,11 @@ button:hover, button:active, button:checked {
     }
 }
 
+@-webkit-keyframes keyarm {
+    0% { -webkit-transform: rotate3d(0,0,0,0); }
+    100% { -webkit-transform: rotate3d(1,1,1,360deg); }
+}
+
 
 .block {
     position: absolute;
