@@ -215,6 +215,7 @@ button:hover, button:active, button:checked {
 
 
 .block {
+	-webkit-display: none;
     position: absolute;
     top: 40vh;
     left: 60vw;
