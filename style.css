@@ -1,0 +1,293 @@
+/* CSS Reset Setting */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li, span,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Clear anchor tag properties */
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+/* Main code */
+
+:root {
+    --fc-bg: #D4ECDD;
+    --fc-text: #112031;
+    --ff-primary: 'Josefin Sans', sans-serif;
+}
+
+body {
+    background-color: var(--fc-bg);
+    color: var(--fc-text);
+    font-family: var(--ff-primary);
+
+    max-width: 60%;
+    margin: 20vh auto;
+}
+
+.name {
+    font-family: var(--ff-primary);
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.contacts {
+    display: inline-block;
+}
+
+.contacts li {
+    font-weight: 400;
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+
+    clear:both;
+    float: left;
+
+    border-bottom: 2px solid transparent;
+}
+
+.contacts li::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    display: block;
+    background-color: var(--fc-text);
+    transition: width .35s ease;
+}
+
+.contacts li:hover::after {
+    width: 100%;
+}
+
+.contacts li i{
+    font-size: 1.25em;
+}
+
+.about {
+    max-width: 20rem;
+    margin-bottom: 0.3em;
+}
+
+.about span {
+    font-weight: bold;
+}
+.about span:hover {
+    text-decoration: line-through;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+button:hover, button:active, button:checked {
+    color: var(--fc-text);
+}
+
+.workHeading, .skillHeading {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.projects, .skillSet {
+    height: 0;
+    overflow: hidden;
+}
+
+.workHeading i , .skillHeading i {
+    margin-left: 0.3em;
+}
+
+.projects li, .skillSet li{
+    border-left: 3px solid var(--fc-text);
+    margin-bottom: 0.3em;
+    margin-left: 1em;
+    padding-left: 3px;
+    padding-top: 3px;
+}
+
+.projects li span {
+    font-weight: bold;
+}
+
+.projects li span:hover{
+    text-decoration: line-through;
+}
+
+.projects li {
+    max-width: 28em;
+}
+
+.skillSet {
+    max-width: 10em;
+    border-right: 4px solid var(--fc-text);
+}
+
+.skillSet li{
+    background: linear-gradient(to right, var(--fc-text), var(--fc-text));
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size 1s 0s;
+}
+
+
+/* box rotation */
+
+.boxAnimation {
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: rotate;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate3d(0,0,0,0);
+    }
+    100% {
+        transform: rotate3d(1,1,1,360deg);
+    }
+}
+
+
+.block {
+    position: absolute;
+    top: 40vh;
+    left: 60vw;
+    perspective: 1500px;
+}
+
+.box {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--fc-bg);
+}
+
+.side-front {
+    transform: translateX(-100px) translateY(-100px) translateZ(100px);
+    background-color: #11203128;
+}
+
+.side-back {
+    transform: translateX(-100px) translateY(-100px) translateZ(-100px);
+    background-color: #11203128;
+}
+
+.side-right {
+    transform: translateX(-200px) translateY(-100px) rotateY(90deg);
+    background-color: #11203128;
+}
+
+.side-left {
+    transform: translateY(-100px) rotateY(90deg);
+    background-color: #11203128;
+}
+
+.side-top {
+    transform: translateX(-100px) translateY(-200px) rotateX(90deg);
+    background-color: #11203128;
+}
+
+.side-bottom {
+    transform: translateX(-100px) rotateX(90deg);
+    background-color: #11203128;
+}
+
+@media (max-device-width: 900px) {
+    .block {
+        top: 25vh;
+    left: 80vw;
+    }
+
+    .box {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid var(--fc-bg);
+    }
+
+    .side-front {
+        transform: translateX(-50px) translateY(-50px) translateZ(50px);
+        background-color: #11203128;
+    }
+    
+    .side-back {
+        transform: translateX(-50px) translateY(-50px) translateZ(-50px);
+        background-color: #11203128;
+    }
+    
+    .side-right {
+        transform: translateX(-100px) translateY(-50px) rotateY(90deg);
+        background-color: #11203128;
+    }
+    
+    .side-left {
+        transform: translateY(-50px) rotateY(90deg);
+        background-color: #11203128;
+    }
+    
+    .side-top {
+        transform: translateX(-50px) translateY(-100px) rotateX(90deg);
+        background-color: #11203128;
+    }
+    
+    .side-bottom {
+        transform: translateX(-50px) rotateX(90deg);
+        background-color: #11203128;
+    }
+}
