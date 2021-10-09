@@ -266,6 +266,10 @@ button:hover, button:active, button:checked {
 }
 
 @media (max-device-width: 900px) {
+	
+	body {
+        margin: 10vh auto;
+    }
     .block {
         top: 25vh;
     left: 80vw;
