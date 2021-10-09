@@ -203,6 +203,12 @@ button:hover, button:active, button:checked {
     0%{
         transform: rotate3d(0,0,0,0);
     }
+    30%{
+        transform: rotate3d(1,1,1,120deg);
+    }
+    60%{
+        transform: rotate3d(1,1,1,240deg);
+    }
     100% {
         transform: rotate3d(1,1,1,360deg);
     }
