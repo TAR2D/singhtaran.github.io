@@ -151,6 +151,16 @@ button:hover, button:active, button:checked {
     margin-left: 0.3em;
 }
 
+.projects h2 {
+    display: inline;
+    font-weight: bold;
+}
+
+.projects h2:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.14em;
+}
+
 .projects li, .skillSet li{
     border-left: 3px solid var(--fc-text);
     margin-bottom: 0.3em;
@@ -171,6 +181,11 @@ button:hover, button:active, button:checked {
     max-width: 28em;
 }
 
+.projects li:not(li:last-child) {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #11203123;
+}
+
 .skillSet {
     max-width: 10em;
     border-right: 4px solid var(--fc-text);
@@ -189,15 +204,12 @@ button:hover, button:active, button:checked {
 .boxAnimation {
     position: relative;
     transform-style: preserve-3d;
-	-webkit-transform-style: preserve-3d;
     animation-name: rotate;
     animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-	-webkit-animation-name: rotate;
-	-webkit-animation-duration: 30s;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-timing-function: linear;
+    -webkit-animation-name: rotate;
+    
 }
 @keyframes rotate {
     0%{
@@ -214,14 +226,8 @@ button:hover, button:active, button:checked {
     }
 }
 
-@-webkit-keyframes keyarm {
-    0% { -webkit-transform: rotate3d(0,0,0,0); }
-    100% { -webkit-transform: rotate3d(1,1,1,360deg); }
-}
-
 
 .block {
-	-webkit-display: none;
     position: absolute;
     top: 40vh;
     left: 60vw;
@@ -266,13 +272,13 @@ button:hover, button:active, button:checked {
 }
 
 @media (max-device-width: 900px) {
-	
-	body {
+    body {
         margin: 10vh auto;
     }
+
     .block {
         top: 25vh;
-    left: 80vw;
+        left: 80vw;
     }
 
     .box {
